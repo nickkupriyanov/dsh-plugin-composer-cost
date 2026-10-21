@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-composer-cost",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
   "description": "DeepSeek Harness Web UI plugin: session cost in CNY and the live peak/off-peak rate, beside the composer token stats.",
@@ -34,7 +34,8 @@
     "locale/*.json",
     "README.md",
     "LICENSE",
-    "docs/*.png"
+    "docs/*.png",
+    "CHANGELOG.md"
   ],
   "exports": {
     ".": "./index.js",

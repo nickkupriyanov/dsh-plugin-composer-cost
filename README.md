@@ -138,6 +138,10 @@ npm run check
 
 CI runs the same checks on Node 20 and 22 for every push and pull request.
 
+## Changelog
+
+Release notes live in [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
 [MIT](LICENSE)
