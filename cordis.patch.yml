@@ -1,0 +1,5 @@
+# Bundle layer: inserts the loader row this package contributes.
+# Installed through dsh.profile.bundles, the row name resolves from node_modules.
+- insert:
+    - id: composer-cost
+      name: 'dsh-plugin-composer-cost'

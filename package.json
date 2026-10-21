@@ -1,0 +1,56 @@
+{
+  "name": "dsh-plugin-composer-cost",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness Web UI plugin: session cost in CNY and the live peak/off-peak rate, beside the composer token stats.",
+  "license": "MIT",
+  "author": "nickkupriyanov",
+  "homepage": "https://github.com/nickkupriyanov/dsh-plugin-composer-cost#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickkupriyanov/dsh-plugin-composer-cost.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nickkupriyanov/dsh-plugin-composer-cost/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "plugin",
+    "cost",
+    "pricing",
+    "tokens"
+  ],
+  "icon": "./icon.svg",
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}
