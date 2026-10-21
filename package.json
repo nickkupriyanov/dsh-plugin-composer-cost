@@ -52,5 +52,8 @@
         "@deepseek-ai/dsh-client-ui-conversation"
       ]
     }
+  },
+  "scripts": {
+    "check": "node --check client.js && node scripts/check.cjs"
   }
 }

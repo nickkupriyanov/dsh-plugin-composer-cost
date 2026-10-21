@@ -1,5 +1,7 @@
 # dsh-plugin-composer-cost
 
+[![check](https://github.com/nickkupriyanov/dsh-plugin-composer-cost/actions/workflows/check.yml/badge.svg)](https://github.com/nickkupriyanov/dsh-plugin-composer-cost/actions/workflows/check.yml)
+
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web UI plugin that shows **what a chat has cost** and **which DeepSeek rate window is active right now**, in the row under the composer where the token statistics already live.
 
 ```
@@ -134,6 +136,21 @@ The Beijing-day window lands within 1.5 % of the console; the residual is the he
 | `icon.svg` | Plugin Manager artwork |
 
 No Harness Client package is imported: anchoring, outside-pointer dismissal, Escape handling and the coin glyph are implemented in `client.js` against `--dsw-*` design tokens only.
+
+## Development
+
+No build step and no dependencies: `client.js` is the browser artifact in the
+loader lazy-factory form, checked in as source. Because nothing type-checks it
+before the Harness materializes it, `scripts/check.cjs` enforces the package
+contract instead - every exported entry point exists, the bundle patch names
+this package, the factory id equals the package name, and no Harness Client
+package is imported.
+
+```sh
+npm run check
+```
+
+CI runs the same checks on Node 20 and 22 for every push and pull request.
 
 ## License
 
