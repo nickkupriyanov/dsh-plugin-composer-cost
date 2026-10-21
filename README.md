@@ -4,25 +4,11 @@
 
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) Web UI plugin that shows **what a chat has cost** and **which DeepSeek rate window is active right now**, in the row under the composer where the token statistics already live.
 
-```
-● ~¥1.91 · Off-peak
-```
+![The cost pill under the composer: ~¥2.71, Off-peak](docs/pill.png)
 
 Click the pill for the breakdown:
 
-```
-Session cost                        ¥1.91
-──────────────────────────────────────────
-Model                | deepseek-flash
-Tariff               | off-peak rates (−50%)
-Input (cache miss)   | 337,369 × ¥1.00/M
-Input (cache hit)    | 28,565,376 × ¥0.02/M
-Output               | 248,604 × ¥4.00/M
-This chat            | ¥1.37
-Subagents (2)        | ¥0.54
-Estimated total      | ¥1.91
-Rates change         | Peak 04:00 (15.10) MSK
-```
+![The breakdown panel: model, tariff, token buckets, this chat versus subagents](docs/panel.png)
 
 The dot is amber during peak hours and green off-peak. The panel is the same trigger-anchored dialog the neighbouring statistic pills open, and it closes on an outside click or Escape.
 

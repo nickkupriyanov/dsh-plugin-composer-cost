@@ -33,7 +33,8 @@
     "icon.svg",
     "locale/*.json",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "docs/*.png"
   ],
   "exports": {
     ".": "./index.js",
